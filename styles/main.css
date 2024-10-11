@@ -42,4 +42,13 @@
         width: 100%;
    }
 
+   .page__header {
+    background-image: url(../images/header-2560w.webp);
+    background-size: cover;
+    background-position: top left;
+   }
+
+   .page__intro {
+    color: var(--light, white);
+   }
 }
