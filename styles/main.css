@@ -18,7 +18,7 @@
     }
     .page__logo::before {
         content: "";
-        display: inline-block;
+        display: block;
         background: center / contain no-repeat transparent;
         /*
         background-position: center;
@@ -26,8 +26,8 @@
         background-repeat: no-repeat;
         */
         background-image: url("../images/logo.svg");
-        width: 2em;
-        height: 1em;
+        width: auto;
+        height: 100%;
         font-size: 1.5em;
     }
     .page__logo > span {
@@ -38,47 +38,83 @@
 /* VRSTVA PRO VAŠE STYLY */
 @layer design {
    .image-responsive {
-        display: block;
-        width: 100%;
+     display: block;
+     width: 100%;
    }
 
    .page__header {
-        background-image: url(../images/header-2560w.webp);
-        background-size: cover;
-        background-position: top left;
+     background-image: url(../images/header-2560w.webp);
+     background-size: cover;
+     background-position: top left;
+     padding: 1em;
    }
 
    .page__logo-container {
-        text-align: center;
+     text-align: center;
    }
 
    .page__logo {
-        display: inline-block;
-        padding: 1em;
+     display: inline-block;
+     padding: 1em;
+     height: 2em;
+     aspect-ratio: 42 / 24;
    }
 
    .page__intro {
-        color: var(--light, white);
-        margin-left: 1em;
-        margin-bottom: 1em;
+     color: var(--light, white);
+   }
+
+   .page__content {
+     padding: 1em;
+   }
+
+   .picture-box {
+     margin: 0;
+   }
+
+   .picture-box__caption {
+     font-size: 0.8em;
+     color: var(--gray, gray);
+     text-align: center;
+     margin-top: .75em;
    }
 
    .button {
-        display: inline-block;
-        background-color: var(--primary, teal);
-        color: var(--light, white);
-        padding: 1em 0.5em;
-        border-radius: 0.5em;
-        font-weight: 700;
-        text-decoration: none;
+     display: inline-block;
+     background-color: var(--primary, teal);
+     color: var(--light, white);
+     padding: 1em 0.5em;
+     border-radius: 0.5em;
+     font-weight: 700;
+     text-decoration: none;
    }
 
    .button--light {
-        background-color: var(--light, white);
-        color: var(--black, black);
+     background-color: var(--light, white);
+     color: var(--black, black);
    }
 
    .button:hover {
-        text-decoration: underline;
+     text-decoration: underline;
+     text-decoration-thickness: 0.05em;
+     color: var(--light, white);
+     background-color: var(--black, black);
+
+   }
+
+   .text-h3 {
+     font-size: 1.125em;
+     font-weight: 700;
+     margin-bottom: 1em;
+   }
+
+   .outline-box {
+     border: 3px solid var(--primary, teal);
+     padding: 1em;
+     margin: 1em 0;
+   }
+
+   .list > li::marker {
+     color: var(--primary, teal);
    }
 }
