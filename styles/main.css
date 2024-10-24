@@ -68,6 +68,17 @@
      padding: 1em;
    }
 
+   .page__footer {
+    background-color: var(--gray, gray);
+    text-align: center;
+    padding: 2em;
+   }
+
+   .page__footer > a {
+    color: var(--light, white);
+    text-decoration: none;
+   }
+
    .picture-box {
      margin: 0;
    }
