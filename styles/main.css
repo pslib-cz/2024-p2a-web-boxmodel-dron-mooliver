@@ -64,34 +64,22 @@
      color: var(--light, white);
    }
 
+   .page__section {
+    padding: 1em;
+   }
+
    .page__content {
      padding: 1em;
+     max-width: 960px;
      line-height: 1.3em;
-   }
-
-   @media only screen and (min-width: 1024px) {
-    .page__content {
-      max-width: 1024px;
-      margin: auto;
-    }
-   }
-
-   .page__product-tab {
-    padding: 3em 1em;
-    display: inline-block;
-   }
-
-   @media only screen and (min-width: 1024px) {
-    .page__product-tab {
-      max-width: 350px;
-    }
+     margin: auto;
    }
 
    .page__advertisement {
     background-color: var(--gray, gray);
     color: var(--light, white);
     text-align: center;
-    padding: 2em 1.4em;
+    padding: 4em 1.4em;
    }
 
    .page__advertisement-heading {
@@ -166,27 +154,42 @@
    .outline-box {
      border: 3px solid var(--primary, teal);
      padding: 1em;
-     margin: 1em 0;
+     margin: 3em 0;
    }
 
    .list > li {
-    padding: 0.4em;
+    padding: 0.4em 0;
    }
 
    .list > li::marker {
      color: var(--primary, teal);
    }
 
-   .gallery > figure {
-     margin: 1em 0;
-     display: inline-block;
+   .product {
+    padding: 3em 1em;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 24em;
    }
 
-   .gallery > figure:nth-child(2) {
-    width: 45%;
+   .gallery {
+    --indent: 0.5em;
+    margin: calc(-1 * var(--indent));
    }
 
-   .gallery > figure:nth-child(3) {
-    width: 45%;
+   .gallery__item {
+    display: block;
+    margin: var(--indent);
+   }
+
+   @media (min-width: 768px) {
+    .gallery__item {
+      display: inline-block;
+      width: calc(50% - 2 * var(--indent));
+    }
+
+    .gallery__item--100w {
+      width: calc(100% - 2 * var(--indent));
+    }
    }
 }
